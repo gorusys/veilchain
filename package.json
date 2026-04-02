@@ -1,0 +1,23 @@
+{
+  "name": "veilchain",
+  "version": "1.0.0",
+  "main": "src/main.zig",
+  "scripts": {
+    "zig:build": "zig build",
+    "zig:test": "zig build test",
+    "zig:test:integration": "zig build test-integration",
+    "zig:run:status": "zig build run -- status",
+    "zig:run:mine": "zig build run -- mine 3",
+    "zig:run:testnet": "zig build run -- testnet 3 2",
+    "check": "npm run zig:build",
+    "generate": "npm run zig:run:testnet",
+    "test": "npm run zig:build && npm run zig:test && npm run zig:test:integration && npm run zig:run:status && npm run zig:run:mine && npm run zig:run:testnet"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "docx": "^9.6.1"
+  }
+}
